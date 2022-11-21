@@ -1,0 +1,28 @@
+
+.bb p
+{
+    text-align: center;
+    margin-top: 500px;
+    
+    
+}
+@media only screen and (max-width: 1200px){
+    body{
+        background-color: yellow;
+    }
+}
+@media only screen and (max-width: 992px){
+    body{
+        background-color: green;
+    }
+}
+@media only screen and (max-width: 768px){
+    body{
+        background-color: orange;
+    }
+}
+@media only screen and (max-width: 576px){
+    body{
+        background-color: aqua;
+    }
+}

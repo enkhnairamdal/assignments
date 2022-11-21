@@ -1,0 +1,88 @@
+.container
+{
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    border: 1px solid whitesmoke;
+    box-shadow: 20px 20px 50px gray;
+    box-sizing: border-box;
+}
+.container h1
+{
+    color: black;
+    position: absolute;
+    top: 700px;
+    left: 1040px;
+}
+.box1
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+    left: 1040px;
+    top: 320px;
+}
+.box1 p{ text-align: center; padding-top: 40px; color:white; font-size: 20px;}
+.box2
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: green;
+    position: absolute;
+    left: 1040px;
+    top: 320px;
+    transition: 1s 0s all ease-in-out;
+}
+.box2 p{ text-align: center; padding-top: 40px; color:white; font-size: 20px;}
+.box3
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+    left: 1040px;
+    top: 320px;
+    transition: 1s 0s all ease-in;
+}
+.box3 p{ text-align: center; padding-top: 40px; color:white; font-size: 20px;}
+.container:hover .box3
+{
+    position: absolute;
+    left: 740px;
+    top: 30px;
+    transition: 1s 0s all ease-in;
+}
+.box1
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    left: 1040px;
+    top: 320px;
+    transition: 2s 0s all ease-in-out;
+}
+.box1 p{ text-align: center; padding-top: 40px; color:white; font-size: 20px;}
+.container:hover .box1
+{
+    position: absolute;
+    left: 1320px;
+    top: 9px;
+    transition: 2s 0s all ease-in-out;
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    border-radius: 0%;
+}
+.container:hover .box2
+{
+    position: absolute;
+    left: 1040px;
+    top: 500px;
+    transition: 1s 0s all ease-in-out;
+}

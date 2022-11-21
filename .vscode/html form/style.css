@@ -1,0 +1,192 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+input
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 50px;
+    height: 30px;
+    border-bottom: solid 0.5px;
+}
+input::placeholder
+{
+    font-size: 20px;
+    padding-left: 10px;
+}
+.inp input:nth-child(2)
+{
+    font-size: 20px;   
+    color: rgb(131, 134, 130);
+    padding-left: 10px;
+}
+.container1000
+{
+    background-color:  rgba(137, 176, 223);
+    width: 100vw;
+    height: 100vh;
+}
+.box
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    
+}
+.left-box
+{
+    background-color: #fff;
+    width: 700px;
+    height: 1000px;
+    border-radius: 20px 0 0 20px;
+}
+.right-box
+{
+    width: 700px;
+    height: 1000px;
+    background-color:   rgb(58, 58, 193);
+    border-radius: 0 20px 20px 0;
+}
+.inp
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 600px;
+    margin: 0 auto; 
+}
+.name
+{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+.name input
+{
+    width: 272px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 50px;
+    height: 30px;
+
+}
+.name input::placeholder
+{
+    font-size: 20px;
+}
+.left-box h1
+{
+    margin: 80px 0 0 45px;
+    color: rgb(38, 84, 157);
+    font-size: 50px;
+}
+#sel
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 50px;
+    height: 30px;
+    font-size: 20px;
+    padding-left: 15px;
+    border-bottom: solid 0.5px;
+}
+.gg button
+{
+    width: 200px;
+    border-radius: 40px;
+    height: 60px;
+}
+.right-box h1
+{
+    margin: 80px 0 0 45px;
+    color: #fff;
+    font-size: 50px;
+}
+.street
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 600px;
+    margin: 0 auto; 
+}
+.right-box input
+{
+    background-color: rgb(58, 58, 193);
+    border-bottom: solid white 0.5px;
+}
+.right-box input::placeholder
+{
+    color: #fff;
+}
+.zip input
+{
+    width: 272px;
+    margin-left: 52px;
+}
+.zip select
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 30px;
+    font-size: 20px;
+    padding-left: 20px;
+    border-bottom: solid 0.5px #fff;
+    background-color: rgb(58, 58, 193);
+    width: 272px;
+    margin-left: 46px;
+
+}
+#street 
+{
+    color: #fff;
+    height: 38px;
+}
+.count
+{
+    margin-left: 52px;
+    width: 600px;
+}
+.phone
+{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+.phone input
+{
+    width: 272px;
+    margin-top: 50px;
+    height: 30px;
+}
+.ff
+{
+    display: flex;
+    margin-left: 52px;
+}
+.ff p 
+{
+    margin-top: 55px;
+    margin-left: 20px;
+    color: #fff;
+}
+.ff p b
+{
+    border-bottom: solid #fff 0.5px;
+}
+.gg button
+{
+    margin-left: 52px;
+    margin-top: 50px;
+}

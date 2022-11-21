@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+}
+.image1
+{
+    display: flex;
+    flex-flow:row;
+    gap: 20px;
+}
+.image1 img
+{
+    object-fit: cover;
+    height: 200px;
+    border-radius: 20px;
+}
+.box1{
+    display: flex;
+    gap: 20px;
+
+}
+.box2
+{
+    display: flex;
+    gap: 20px;
+}
+@media only screen and (max-width: 1024px)
+{
+    .image1
+    {
+        display: flex;  
+        flex-flow: row;
+    }
+
+    .image1 img
+    {
+        height: 200px;
+        width: 150px;
+    }
+}
+@media only screen and (max-width: 768px)
+{
+    .image1
+    {
+        display: flex;  
+        flex-flow: column;
+    }
+    .image1 img
+    {
+        height: 200px;
+        width: 200px;
+  
+    }
+ 
+}
+@media only screen and (max-width: 340px)
+{
+    .image1
+    {
+        display: flex;  
+        flex-flow: column;
+
+    }
+    .image1 img
+    {
+        height: 400px;
+        width: 400px;
+
+    }
+    .box1
+    {
+        display: flex;
+        flex-flow: column;
+    }
+    .box2
+    {
+        display: flex;
+        flex-flow: column;
+    }
+}
+.b1, .b2,.b3,.b4
+{
+    display: flex;
+}
+.b1 img, .b2 img,.b3 img,.b4 img
+{
+    object-fit: cover;
+    height: 200px;
+    border-radius: 20px;
+}
+@media only screen and (max-width:1024px)
+{
+    .b1,.b2,.b3,.b4
+    {
+        display: flex;  
+        flex-flow: column;
+    }
+    .b1 img,.b2 img,.b3 img,.b4 img
+    {
+        height: 200px;
+        width: 200px;
+    }
+ 
+}
+@media only screen and (max-width:768px)
+{
+    .b1,.b2,.b3,.b4
+    {
+        display: flex;  
+        flex-flow: column;
+    }
+    .b1,.b2,.b3,.b4 img
+    {
+        height: 200px;
+        width: 200px;
+    }
+ 
+}
+@media only screen and (max-width:340px)
+{
+    .b1,.b2,.b3,.b4
+    {
+        display: flex;  
+        flex-flow: column;
+        gap: 20px;
+    }
+    .b1,.b2,.b3,.b4 img
+    {
+        height: 200px;
+        width: 200px;
+    }
+}
