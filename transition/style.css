@@ -5,7 +5,7 @@
     height: 200px;
     background-color: blue;
 }
-#box1:hover
+#box1:active
 {
     width: 1000px;
     transition: 0.5s 0s all linear;
