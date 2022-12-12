@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="aimagNames">
+      <li id="aimag-101">Архангай</li>
+      <li id="aimag-202">Баян-Өлгий</li>
+      <li id="aimag-103">Баянхонгор</li>
+      <li id="aimag-104">Булган</li>
+      <li id="aimag-205">Говь-Алтай</li>
+      <li id="aimag-406">Говьсүмбэр</li>
+      <li id="aimag-407">Дархан-Уул</li>
+      <li id="aimag-408">Дорноговь</li>
+      <li id="aimag-309">Дорнод</li>
+      <li id="aimag-410">Дундговь</li>
+      <li id="aimag-211">Завхан</li>
+      <li id="aimag-112">Орхон</li>
+      <li id="aimag-113">Өвөрхангай</li>
+      <li id="aimag-414">Өмнөговь</li>
+      <li id="aimag-315">Сүхбаатар</li>
+      <li id="aimag-416">Сэлэнгэ</li>
+      <li id="aimag-417">Төв</li>
+      <li id="aimag-218">Увс</li>
+      <li id="aimag-219">Ховд</li>
+      <li id="aimag-120">Хөвсгөл</li>
+      <li id="aimag-321">Хэнтий</li>
+      <li id="aimag-522">Улаанбаатар</li>
+    </ul>
+    <script>
+      console.log(document.querySelector("ul li"));
+      console.log(document.querySelectorAll("ul li")[21]);
+      console.log(document.getElementById("aimag-315"));
+      for (let i = 0; i <= 21; i++) {
+        document.getElementsByTagName("li")[i].style.color = "teal";
+        document.getElementsByTagName("li")[i].style.width = "200px";
+        document.getElementsByTagName("li")[i].style.listStyle = "none";
+        document.getElementsByTagName("li")[i].style.border = "1px teal solid";
+        document.getElementsByTagName("li")[i].style.borderRadius = "10px";
+        document.getElementsByTagName("li")[i].style.height = " 30px";
+        document.getElementsByTagName("li")[i].style.textAlign = "center";
+        document.getElementsByTagName("li")[i].style.paddingTop = "10px";
+        document.getElementsByTagName("li")[i].style.marginTop = "20px";
+      }
+      const idElement = document.querySelectorAll("ul li");
+      for (let i = 0; i <= 21; i++) {
+        if (idElement[i].id[6] == 1) {
+          idElement[i].style.borderColor = "orange";
+          idElement[i].style.color = "orange";
+        }
+        if (idElement[i].id[6] == 3) {
+          idElement[i].style.borderColor = "brown";
+          idElement[i].style.color = "brown";
+        }
+        if (idElement[i].id[6] == 4) {
+          idElement[i].style.borderColor = "darkblue";
+          idElement[i].style.color = "darkblue";
+        }
+        if (idElement[i].id[6] == 5) {
+          idElement[i].style.borderColor = "red";
+          idElement[i].style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>
