@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+      body {
+        background-color: rgb(229, 229, 229);
+      }
+      .container {
+        width: 400px;
+        height: 600px;
+        margin: 200px auto;
+      }
+      .top {
+        height: 300px;
+        background-color: rgb(125, 151, 248);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      .bottom {
+        background-color: rgb(255, 255, 255);
+        height: 300px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      .profile {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: rgb(228, 229, 229);
+        position: relative;
+        left: 120px;
+        bottom: 65px;
+        border: 7px solid white;
+      }
+      img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+      }
+      .name {
+        justify-content: center;
+        display: flex;
+        gap: 10px;
+      }
+      h1 {
+        margin-top: -50px;
+        color: white;
+      }
+      .top p {
+        text-align: center;
+        color: white;
+      }
+      .bottom {
+        margin-top: -20px;
+        display: flex;
+        gap: 20px;
+      }
+      ul {
+        padding-top: 20px;
+      }
+      .bom1 {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: rgb(189, 138, 206);
+      }
+      .bom2 {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: rgb(230, 132, 132);
+      }
+      .bom3 {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: rgb(126, 151, 248);
+      }
+      .bom {
+        display: flex;
+        gap: 34px;
+        flex-direction: column;
+        margin-top: 47px;
+        margin-left: 60px;
+      }
+      .text {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div id="profile" class="profile"></div>
+        <div class="name">
+          <h1 id="firstname"></h1>
+          <h1 id="lastname"></h1>
+        </div>
+        <p id="email"></p>
+        <p id="number"></p>
+      </div>
+      <div class="bottom">
+        <div class="bom">
+          <div class="bom1"></div>
+          <div class="bom2"></div>
+          <div class="bom3"></div>
+        </div>
+        <div class="text">
+          <h2 id="location"></h2>
+          <h2 id="facebook"></h2>
+          <h2 id="devices"></h2>
+        </div>
+      </div>
+    </div>
+    <script>
+      let profileEl = document.getElementById("profile");
+      let firstEl = document.getElementById("firstname");
+      let lastEl = document.getElementById("lastname");
+      let emailEl = document.getElementById("email");
+      let phoneEl = document.getElementById("number");
+      let devicesEl = document.getElementById("devices");
+      let locationEl = document.getElementById("location");
+      let facebookEl = document.getElementById("facebook");
+      fetch("https://randomuser.me/api/")
+        .then((res) => res.json())
+        .then((userData) => {
+          let pictureEl = document.createElement("img");
+          pictureEl.src = userData.results[0].picture.large;
+          profileEl.append(pictureEl);
+          locationEl.innerHTML = userData.results[0].location.country;
+          facebookEl.innerHTML = userData.results[0].location.state;
+          devicesEl.innerHTML = userData.results[0].dob.date;
+          phoneEl.innerHTML = userData.results[0].phone;
+          emailEl.innerHTML = userData.results[0].email;
+          firstEl.innerHTML = userData.results[0].name.first;
+          lastEl.innerHTML = userData.results[0].name.last;
+        });
+    </script>
+  </body>
+</html>
