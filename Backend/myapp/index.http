@@ -1,0 +1,25 @@
+GET http://localhost:8800/categories
+###
+
+POST http://localhost:8800/categories
+content-type:  application/json
+
+{
+    "name": "Niigem"
+}
+
+###
+
+DELETE http://localhost:8800/categories/a595a31e-761c-4318-86de-d72c8bdb5af7
+
+###
+
+PUT http://localhost:8800/categories/b549a92b-51d4-4342-80a7-6f1f3c71377f
+content-Type: application/json
+
+{
+    "Text" : "bat bol sain huuhed",
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1T-XauS0O13S4iOwKzlvbbloqEhF8OblkkwqyQRjbr1ZIHfMXds52bBKKhZjSURH8QN4&usqp=CAU"
+}
+
+

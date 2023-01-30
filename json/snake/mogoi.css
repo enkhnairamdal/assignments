@@ -1,0 +1,15 @@
+#area {
+    position: relative;
+    background-color: gray;
+    
+  }
+  .body {
+    position: absolute;
+    /* border-radius: 30%; */
+    background-color: brown;
+  }
+  .food {
+    position: absolute;
+    background-color: green;
+    border-radius: 50%;
+  }

@@ -1,6 +1,6 @@
     let imageEl = document.getElementById('image')
 
-    let n = 200
+    let n = 10
     fetch('https://dummyjson.com/products')
     .then((res) => res.json())
     .then((cardData) =>{

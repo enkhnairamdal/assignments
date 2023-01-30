@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <script>
+    let slace = 30;
+    let areaWidth = 20;
+    let areaHeight = 20;
+    let speed = 200;
+    let initialPosition = [
+      { x: 1, y: 1 },
+      { x: 2, y: 1 },
+      { x: 3, y: 1 },
+    ];
+    let initialDirection = "left";
+  </script>
+  <link rel="stylesheet" href="mogoi.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="area"></div>
+    <div class="btn">
+      <button onclick="changeDirection ('up')">up</button>
+      <button onclick="changeDirection ('down')">down</button>
+      <button onclick="changeDirection ('right')">right</button>
+      <button onclick="changeDirection ('left')">left</button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
