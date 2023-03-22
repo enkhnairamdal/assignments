@@ -17,8 +17,9 @@ router.get("/", (req, res) => {
   );
 });
 
-router.get("/articles/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   const { id } = req.params;
+  console.log(id);
   connection.query(
     `select * from article where id=?`,
     [id],
@@ -27,7 +28,6 @@ router.get("/articles/:id", (req, res) => {
     }
   );
 });
-
 router.post("/", (req, res) => {
   const { title, categoryId, content } = req.body;
   const newArticle = {
@@ -35,10 +35,20 @@ router.post("/", (req, res) => {
     title,
     content,
     category_id: categoryId,
+    name,
+    newsPhoto,
   };
+  console.log(newArticle);
   connection.query(
-    `insert into article set ?`,
-    newArticle,
+    `insert into article  values (?,?,?,?)`,
+    [
+      newArticle.id,
+      newArticle.title,
+      newArticle.content,
+      newArticle.category_id,
+      // newArticle.name,
+      // newArticle.newsPhoto,
+    ],
     function (err, results, fields) {
       res.sendStatus(201);
     }
