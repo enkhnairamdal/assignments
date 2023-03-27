@@ -1,1 +1,6 @@
 /node_modules
+
+MONGODB_STRING= "mongodb+srv://Nairamdal:jcbOsw4o8wpybCH6@cluster0.0ru2lks.mongodb.net/blog"
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=

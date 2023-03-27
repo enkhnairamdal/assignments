@@ -5,11 +5,10 @@ import {
   RouterProvider,
   BrowserRouter,
 } from "react-router-dom";
-import { Todos } from "./Todos";
-import { NavBar } from "./Navbar";
+
+import { AdminApp } from "./AdminApp";
 import { Login } from "./LoginHome";
-import { SignUp } from "./SignUp";
-import { AdminEditor } from "./AdminEditor";
+import { ClientApp } from "./ClientApp";
 
 // import { Editor } from "./editor";
 
@@ -17,13 +16,13 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <NavBar />
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/admin/angilal" element={<Todos />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin/*" element={<AdminApp />} />
+          <Route path="*" element={<ClientApp />} />
         </Routes>
       </BrowserRouter>
-      <AdminEditor />
+      {/* <AdminEditor /> */}
     </>
   );
 }

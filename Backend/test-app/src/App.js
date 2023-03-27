@@ -1,6 +1,8 @@
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Todos } from "./todo";
+
 axios.interceptors.request.use((config) => {
   console.log("Request sent to: ", config.url);
   return config;
@@ -8,7 +10,7 @@ axios.interceptors.request.use((config) => {
 function App() {
   const [name, setName] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:8800/categories").then((res) => {
+    axios.get("http://localhost:8000/categories").then((res) => {
       const { data, status } = res;
       if (status === 200) {
         setName(data);

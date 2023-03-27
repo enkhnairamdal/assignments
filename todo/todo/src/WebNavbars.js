@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -6,7 +5,15 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
-export function NavBar() {
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Login } from "./LoginHome";
+
+export function AdminNavbar() {
+  function quit() {
+    localStorage.removeItem("loginToken");
+    window.location.reload();
+  }
   return (
     <>
       <Navbar bg="dark" expand="lg">
@@ -21,12 +28,10 @@ export function NavBar() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link className="text-secondary" href="#action1">
-                Хэрэглэгч
-              </Nav.Link>
-              <Nav.Link className="text-secondary" href="/admin/angilal">
+              <Nav.Link className="text-secondary" href="/admin/categories">
                 Ангилал
               </Nav.Link>
+
               <NavDropdown title="Мэдээ" id="navbarScrollingDropdown">
                 <NavDropdown.Item className="text-secondary" href="#action3">
                   Мэдээ
@@ -35,7 +40,10 @@ export function NavBar() {
                   Сэтгэгдэл
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item className="text-secondary" href="#action5">
+                <NavDropdown.Item
+                  className="text-secondary"
+                  href="/admin/ckeditor"
+                >
                   Шинэ мэдээ
                 </NavDropdown.Item>
               </NavDropdown>
@@ -48,7 +56,7 @@ export function NavBar() {
                 <Button
                   className="border border-0 bg-danger text-light"
                   variant="outline-success"
-                  href="/"
+                  onClick={() => quit()}
                 >
                   Гарах
                 </Button>
@@ -58,5 +66,43 @@ export function NavBar() {
         </Container>
       </Navbar>
     </>
+  );
+}
+export function ClientNavbar() {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    axios.get(`http://localhost:8000/categories`).then((res) => {
+      const { data, status } = res;
+      if (status === 200) {
+        setCategories(data);
+      } else {
+        alert(`Aldaa garlaa: ${status}`);
+      }
+    });
+  }, []);
+  return (
+    <Navbar bg="light" variant="light">
+      <Container>
+        <Navbar.Brand href="/blog">Navbar</Navbar.Brand>
+        <Nav className="me-auto">
+          <NavDropdown
+            // id="nav-dropdown-dark-example"
+            title="Medee"
+            menuVariant="light"
+          >
+            {categories.map((category) => (
+              <NavDropdown.Item
+                key={category.id}
+                value={category.id}
+                href={`/blog/category/${category.id}`}
+              >
+                {category.name}
+              </NavDropdown.Item>
+            ))}
+          </NavDropdown>
+        </Nav>
+      </Container>
+    </Navbar>
   );
 }

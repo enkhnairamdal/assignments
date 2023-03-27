@@ -79,8 +79,8 @@
   border: none;
   outline: none;
   color: #23242a;
-  font-size: 1em;
-  letter-spacing: 0.2em;
+  font-weight: 500;
+  letter-spacing: 1px;
   z-index: 10;
 }
 .inputbox span {
@@ -129,7 +129,7 @@
 .links a:nth-child(2) {
   color: #45f3ff;
 }
-input[type="submit"] {
+button {
   border: none;
   outline: none;
   background-color: #45f3ff;
@@ -140,6 +140,6 @@ input[type="submit"] {
   font-weight: 600;
   cursor: pointer;
 }
-input[type="submit"]:active {
+button:active {
   opacity: 0.8;
 }
